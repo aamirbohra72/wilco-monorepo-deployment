@@ -9,10 +9,11 @@ RUN npm install -g pnpm
 COPY package*.json ./
 
 # Install dependencies using pnpm
-RUN pnpm install
+RUN pnpm install --prod
 
 # Copy the rest of your app
 COPY . .
 
 EXPOSE 8080
+
 CMD ["node", "index.js"]
