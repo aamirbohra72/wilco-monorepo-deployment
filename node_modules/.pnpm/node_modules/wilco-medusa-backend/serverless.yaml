@@ -1,0 +1,23 @@
+service: test-wilco
+
+provider:
+
+  name: aws
+
+  runtime: nodejs20.x
+ 
+functions:
+
+  help:
+
+    handler: handler.health-check
+
+    events:
+
+      - http:
+
+          path: health-check
+
+          method: get
+
+ 
